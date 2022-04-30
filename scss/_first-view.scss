@@ -1,0 +1,20 @@
+#first-view {
+    img {
+        &.FV-sp {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:670px) {
+    #first-view {
+        img {
+            &.FV-pc {
+                display: none;
+            }
+            &.FV-sp {
+                display: block;
+            }
+        }
+    }
+}
