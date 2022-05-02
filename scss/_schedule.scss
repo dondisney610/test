@@ -1,0 +1,73 @@
+#schedule {
+    padding-bottom: 130px;
+    h2 {
+        img {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+    .schedule-contents-pc {
+        text-align: center;
+        img {
+            &:nth-child(1) {
+                display: block;
+                width: 80%;
+                margin-left: auto;
+                margin-bottom: 90px;
+            }
+            &:nth-child(2) {
+                display: block;
+                width: 65%;
+                margin: 0 auto 100px;
+            }
+        }
+        iframe {
+            width: 62.2%;
+            height: 35vw;
+        }
+    }
+    .schedule-contents-sp {
+        display: none;
+    }
+}
+
+@media screen and (max-width:670px) {
+    #schedule {
+        padding-bottom: 40px;
+        h2 {
+            img {
+                &:nth-child(1) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    display: block;
+                }
+            }
+        }
+        .schedule-contents-pc {
+            display: none;
+        }
+        .schedule-contents-sp {
+            display: block;
+            text-align: center;
+            img {
+                &:nth-child(1) {
+                    display: block;
+                    width: 90%;
+                    margin-left: auto;
+                    margin-bottom: 40px;
+                }
+                &:nth-child(2) {
+                    display: block;
+                    width: 85%;
+                    margin: 0 auto 25px;
+                }
+            }
+            iframe {
+                width: 90%;
+                height: 51vw;
+            }
+        }
+    }
+}

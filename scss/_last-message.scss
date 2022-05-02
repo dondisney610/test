@@ -1,0 +1,20 @@
+#last-message {
+    img {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:670px) {
+    #last-message {
+        img {
+            &:nth-child(1) {
+                display: none;
+            }
+            &:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+#problem {
+    padding-top: 65px;
+    padding-bottom: 75px;
+    .container {
+        img {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:670px) {
+    #problem {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .container {
+            img {
+                &:nth-child(1) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
