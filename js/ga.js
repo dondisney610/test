@@ -1,0 +1,33 @@
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-48476324-1']);
+	_gaq.push(['_addOrganic', 'search.smt.docomo.ne.jp', 'MT']);
+	_gaq.push(['_addOrganic', 'images.google', 'q']);
+	_gaq.push(['_addOrganic', 'biglobe', 'q']);
+	_gaq.push(['_addOrganic', 'nifty', 'q']);
+	_gaq.push(['_addOrganic', 'azby.search.nifty', 'q']);
+	_gaq.push(['_addOrganic', 'infoseek', 'qt']);
+	_gaq.push(['_addOrganic', 'rakuten', 'qt']);
+	_gaq.push(['_addOrganic', 'livedoor', 'q']);
+	_gaq.push(['_addOrganic', 'so-net', 'query']);
+	_gaq.push(['_addOrganic', 'fresheye', 'kw']);
+	_gaq.push(['_addOrganic', 'auone', 'q']);
+	_gaq.push(['_addOrganic', 'ocnsearch', 'MT']);
+	_gaq.push(['_addOrganic', 'hi-ho', 'MT']);
+	_gaq.push(['_addOrganic', 'odn', 'search']);
+	_gaq.push(['_addOrganic', 'eonet', 'search']);
+	_gaq.push(['_addOrganic', 'goo', 'MT']);
+	_gaq.push(['_addOrganic', 'excite', 'search']);
+	_gaq.push(['_addOrganic', 'asahi', 'Keywords']);
+	_gaq.push(['_addOrganic', 'luna', 'q']);
+	_gaq.push(['_addOrganic', 'lunascape', 'p']);
+	_gaq.push(['_addOrganic', 'hatena', 'word']);
+	_gaq.push(['_addOrganic', 'ecnavi', 'Keywords']);
+	_gaq.push(['_addOrganic', 'mixi', 'keyword']);
+	_gaq.push(['_addOrganic', 'twitter', 'q']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
