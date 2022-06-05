@@ -4,7 +4,7 @@ $(function() {
             adImage: './img/peelback-behind-image-sp.png', //下に隠す画像
             peelImage: './img/peel-image.png', //めくれる画像
             clickURL: '/contact', //クリック時のリンク先
-            smallSize: 100, //初期サイズ
+            smallSize: 195, //初期サイズ
             bigSize: 195, //最大サイズ
             autoAnimate: true //自動アニメーション
         });
