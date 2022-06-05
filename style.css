@@ -34,7 +34,7 @@ body {
 }
 
 body.top-body {
-  background-image: url(../img/top-bg.png);
+  background-image: url(./img/top-bg.png);
 }
 
 body.top-body #peelback a:hover {
