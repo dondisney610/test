@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body,
 h1,
 h2,
@@ -9,7 +10,7 @@ p {
 }
 
 body {
-  font-family: a-otf-ryumin-pr6n, serif;
+  font-family: "MS Pゴシック", serif;
   font-style: normal;
 }
 
@@ -55,7 +56,7 @@ a:hover {
 
 .cta .container .cta-button {
   position: absolute;
-  bottom: 4.5vw;
+  bottom: 6.5vw;
   right: 0;
   left: 0;
 }
@@ -63,8 +64,8 @@ a:hover {
 .cta .container .cta-button .shiny-btn3 {
   display: block;
   position: relative;
-  width: 55%;
-  border-radius: 50px;
+  width: 88%;
+  border-radius: 20px;
   margin: 0px auto;
   overflow: hidden;
 }
@@ -80,6 +81,10 @@ a:hover {
   background-color: #fff;
   -webkit-animation: shiny-btn3 3s ease-in-out infinite;
           animation: shiny-btn3 3s ease-in-out infinite;
+}
+
+.cta .container .cta-button .shiny-btn3 img.button-sp {
+  display: none;
 }
 
 .cta .gold-separate {
@@ -121,9 +126,19 @@ a:hover {
   .cta .container .cta-image img:nth-child(2) {
     display: block;
   }
+  .cta .container .cta-button {
+    bottom: 10.5vw;
+  }
   .cta .container .cta-button .shiny-btn3 {
-    padding: 10px 0;
+    padding: 0px 0;
     margin: 0 auto;
+    width: 86%;
+  }
+  .cta .container .cta-button .shiny-btn3 img.button-pc {
+    display: none;
+  }
+  .cta .container .cta-button .shiny-btn3 img.button-sp {
+    display: block;
   }
   .cta .gold-separate {
     width: 100%;
@@ -146,11 +161,6 @@ a:hover {
 
 .course-intro .container div.to-be-used {
   margin-bottom: 170px;
-}
-
-.course-intro .container div.support-with {
-  width: 78%;
-  margin: 0 auto;
 }
 
 .course-intro .container div.course-notice {
@@ -181,8 +191,8 @@ a:hover {
   .course-intro .container div.to-be-used {
     margin-bottom: 40px;
   }
-  .course-intro .container div.support-with {
-    width: 100%;
+  .course-intro .container div.course-notice {
+    margin-top: -90px;
   }
 }
 
@@ -224,6 +234,10 @@ a:hover {
   }
   .problem-area .container .problem img:nth-child(2) {
     display: block;
+  }
+  .problem-area .container .arrow {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .problem-area .container .arrow img:nth-child(1) {
     display: none;
@@ -364,6 +378,11 @@ a:hover {
   display: none;
 }
 
+.flow .container .flow-contents {
+  -webkit-transform: translateY(-28px);
+          transform: translateY(-28px);
+}
+
 .flow .container .flow-contents img:nth-child(2) {
   display: none;
 }
@@ -394,11 +413,6 @@ a:hover {
   width: 69.4%;
   margin: 0 auto;
   padding-bottom: 100px;
-  border-bottom: 1px #a09e9e solid;
-}
-
-.faq .container .faq-heading {
-  margin-bottom: 80px;
 }
 
 .faq .container .faq-heading img:nth-child(2) {
@@ -407,6 +421,8 @@ a:hover {
 
 .faq .container .question-area {
   margin-bottom: 20px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .faq .container .question-area .question-boxes {
@@ -434,6 +450,8 @@ a:hover {
 
 .faq .container .question-area .question-boxes .question-box-right p {
   font-size: 35px;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
 }
 
 .faq .container .separator {
@@ -443,6 +461,12 @@ a:hover {
 
 .faq .container .separator img {
   width: 80%;
+}
+
+.faq .container .answer-area {
+  border-bottom: 1px #a09e9e solid;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .faq .container .answer-area .answer-boxes {
@@ -470,18 +494,17 @@ a:hover {
 
 .faq .container .answer-area .answer-boxes .answer-box-right p {
   font-size: 35px;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
 }
 
 @media (max-width: 670px) {
   .faq {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
   .faq .container {
     width: 100%;
     padding-bottom: 30px;
-  }
-  .faq .container .faq-heading {
-    margin-bottom: 40px;
   }
   .faq .container .faq-heading img:nth-child(1) {
     display: none;
@@ -490,16 +513,26 @@ a:hover {
     display: block;
   }
   .faq .container .question-area {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
   .faq .container .question-area .question-boxes .question-box-right p {
-    font-size: 20px;
+    font-size: 17px;
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+  }
+  .faq .container .separator {
+    text-align: center;
   }
   .faq .container .answer-area {
-    margin-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 40px;
   }
   .faq .container .answer-area .answer-boxes .answer-box-right p {
-    font-size: 20px;
+    font-size: 17px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -794,3 +827,4 @@ a:hover {
     margin-top: 44px;
   }
 }
+/*# sourceMappingURL=style.css.map */
