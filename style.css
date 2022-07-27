@@ -10,6 +10,10 @@ li {
   padding: 0;
 }
 
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   font-family: "MS Pゴシック", serif;
 }
