@@ -460,7 +460,7 @@ img {
   }
   .review .review-content .review-boxes li p {
     font-size: 3.4vw;
-    margin: 3vw auto 0;
+    margin: 2.5vw auto 0;
   }
   .review .review-content .review-boxes li:nth-child(1) {
     background-image: url(./img/reviewer1-bg-sp.png);
