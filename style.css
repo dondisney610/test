@@ -310,6 +310,12 @@ img {
   .introduction .introduction-content .introduction-container .books-boxes .books-box p {
     font-size: 2.5vw;
   }
+  .introduction .introduction-content .introduction-container .books-boxes .books-box:nth-child(3) {
+    margin-top: 1vw;
+  }
+  .introduction .introduction-content .introduction-container .books-boxes .books-box:nth-child(3) img {
+    width: 30%;
+  }
 }
 
 .recommend h2 img:nth-child(2) {
