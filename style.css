@@ -257,7 +257,7 @@ img {
     width: 93.8%;
     background-image: url(./img/introduction-container-bg-sp.png);
     height: 278.5vw;
-    padding: 9.5vw 0 0;
+    padding: 8.5vw 0 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -308,7 +308,7 @@ img {
     display: inline-block;
   }
   .introduction .introduction-content .introduction-container .books-boxes .books-box p {
-    font-size: 2.6vw;
+    font-size: 2.5vw;
   }
 }
 
