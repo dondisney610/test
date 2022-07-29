@@ -146,7 +146,7 @@ img {
   width: 72.75%;
   height: 209.5vw;
   margin: 0 auto;
-  padding: 8.5vw 0 0;
+  padding: 7.5vw 0 0;
   background-image: url(./img/introduction-container-bg-pc.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -163,17 +163,17 @@ img {
 
 .introduction .introduction-content .introduction-container h3.qualification-heading {
   width: 43%;
-  margin-top: 4vw;
+  margin-top: 3.75vw;
 }
 
 .introduction .introduction-content .introduction-container h3.books-heading {
   width: 29%;
-  margin-top: 4vw;
+  margin-top: 3.75vw;
 }
 
 .introduction .introduction-content .introduction-container .teacher-image {
   width: 80%;
-  margin: 2vw auto 0;
+  margin: 1.5vw auto 0;
 }
 
 .introduction .introduction-content .introduction-container .teacher-image img:nth-child(2) {
@@ -182,7 +182,7 @@ img {
 
 .introduction .introduction-content .introduction-container .introduction-text {
   width: 80%;
-  margin: 2vw auto 0;
+  margin: 1.5vw auto 0;
 }
 
 .introduction .introduction-content .introduction-container .introduction-text p {
