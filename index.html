@@ -5,147 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>グローバルスピリチュアル愛好会</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>メルマガテスト</title>
+    <style>
+        .cta-input input {
+            border: #339933 3px solid;
+            display: block;
+            width: 77%;
+            height: 80px;
+            margin: 0 auto;
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        .cta-input input::placeholder {
+            text-align: center;
+            font-size: 35px;
+        }
+        
+        .cta-button {
+            margin-top: 40px;
+        }
+        
+        .cta-button input {
+            background-color: unset;
+            border: none;
+            padding: 0;
+            display: block;
+            background-image: url(./cta-button.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 77%;
+            height: 19.7vw;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="FV">
-        <img src="./img/FV-pc.png" alt="PCのファーストビュー">
-        <img src="./img/FV-sp.png" alt="SPのファーストビュー">
-    </div>
-    <div class="cta">
-        <a href="#contact">
-            <img src="./img/cta-pc.png" class="btn" alt="PC版のボタン">
-            <img src="./img/cta-sp.png" class="btn" alt="SP版のボタン">
-        </a>
-    </div>
-    <section class="recommend">
-        <h2 class="recommend-heading">
-            <img src="./img/recommend-heading-pc.png" alt="こんな人におすすめです">
-            <img src="./img/recommend-heading-sp.png" alt="こんな人におすすめです">
-        </h2>
-        <div class="recommend-check">
-            <img src="./img/recommend-check-pc.png" alt="こんな人におすすめのリスト">
-            <img src="./img/recommend-check-sp.png" alt="こんな人におすすめのリスト">
+    <form action="https://39auto.biz/aika-chie/planmail.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="mcode" value="UTF-8">
+        <input type="hidden" name="pid" value="2">
+        <input type="hidden" name="spflg" value="1">
+        <div class="cta-input">
+            <input type="text" name="email" size="30" placeholder="メールアドレスを入力してください">
         </div>
-        <div class="arrow">
-            <img src="./img/arrow-pc.png" alt="スピリチュアル愛好会は">
-            <img src="./img/arrow-sp.png" alt="スピリチュアル愛好会は">
+        <div class="cta-button">
+            <input type="submit" name="sbm" value="">
         </div>
-        <div class="recommend-content">
-            <img src="./img/recommend-content-pc.png" alt="PCの「こんな人におすすめ」セクションのコンテンツ">
-            <img src="./img/recommend-content-sp.png" alt="SPの「こんな人におすすめ」セクションのコンテンツ">
-        </div>
-    </section>
-    <section class="schedule">
-        <h2 class="schedule-heading">
-            <img src="./img/schedule-heading-pc.png" alt="タイムスケジュール">
-            <img src="./img/schedule-heading-sp.png" alt="タイムスケジュール">
-        </h2>
-        <div class="schedule-content">
-            <img src="./img/schedule-content-pc.png" alt="PCのスケジュールセクションのコンテンツ">
-            <img src="./img/schedule-content-sp.png" alt="SPのスケジュールセクションのコンテンツ">
-        </div>
-    </section>
-    <section class="review">
-        <h2>
-            <img src="./img/review-heading-pc.png" alt="参加者の声">
-            <img src="./img/review-heading-sp.png" alt="参加者の声">
-        </h2>
-        <div class="review-content">
-            <ul class="review-boxes">
-                <li>
-                    <img src="./img/reviewer1-pc.png" alt="1つ目の参加者の声">
-                    <img src="./img/reviewer1-sp.png" alt="1つ目の参加者の声">
-                    <p>常連さんばかりでは無く、初参加の人が毎回必ずいらっしゃるので、スピリチュアル初心者でも気兼ねなく参加できるのが嬉しいです。</p>
-                </li>
-                <li>
-                    <img src="./img/reviewer2-pc.png" alt="2つ目の参加者の声">
-                    <img src="./img/reviewer2-sp.png" alt="2つ目の参加者の声">
-                    <p>スピリチュアルとはご縁の無い人でも楽しめて、しかも何かしらのスキルが習得出来るように思います。<br> 主催者が、「人の心の痛み」を理解しているだけに、ホットな気持ちになれます。
-                    </p>
-                </li>
-                <li>
-                    <img src="./img/reviewer3-pc.png" alt="3つ目の参加者の声">
-                    <img src="./img/reviewer3-sp.png" alt="3つ目の参加者の声">
-                    <p>スピリチュアルはいかなるものか知らなくても特殊能力がなくても大丈夫<br> 何らかの能力がある方も、そうでない方も、スピリチュアルという言葉に導かれ、テーマにそって意見交換をしました。
-                    </p>
-                </li>
-                <li>
-                    <img src="./img/reviewer4-pc.png" alt="4つ目の参加者の声">
-                    <img src="./img/reviewer4-sp.png" alt="4つ目の参加者の声">
-                    <p>瞑想のzoomでの指導受けました。今までCDや動画の声を聴きながら瞑想してましたが、直接リアルタイムでの瞑想指導は自分が自分でないようなとても心地良い時間を過ごせました。</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="introduction">
-        <h2 class="introduction-heading">
-            <img src="./img/introduction-heading-pc.png" alt="主催紹介">
-            <img src="./img/introduction-heading-sp.png" alt="主催紹介">
-        </h2>
-        <div class="introduction-content">
-            <div class="introduction-container">
-                <h3>
-                    <img src="./img/introduction-container-heading-pc.png" alt="生き生きヘルスラボ">
-                    <img src="./img/introduction-container-heading-sp.png" alt="生き生きヘルスラボ">
-                </h3>
-                <div class="teacher-image">
-                    <img src="./img/teacher-pc.png" alt="PCの講師の写真">
-                    <img src="./img/teacher-sp.png" alt="PCの講師の写真">
-                </div>
-                <div class="introduction-text">
-                    <p>共に喜び、共に前進、共に成長をモットとし、お客さんの夢・目標を現実するのは弊社の使命です。<br><span class="purple">無意識に直接アプローチするエグゼクティブコーチング</span>と言う、心理学脳科学の手法をベースに、皆さんの<span class="purple">健康、目標、人間関係等を含めた人生の課題をセッション</span>にて望むように進むのをサポートしております。 </p>
-                </div>
-                <h3 class="qualification-heading">
-                    <img src="./img/qualification-heading-pc.png" alt="所有資格">
-                    <img src="./img/qualification-heading-sp.png" alt="所有資格">
-                </h3>
-                <div class="qualification">
-                    <p>全米催眠療法協会認定ヒプノシストレーナー<br> エグゼクティブコーチング協会
-                        <br> 認定ヒプノシストレーナー
-                        <br> 認定NLPマスタープラクティショナー
-                        <br> 認定NLPプラクティショナー
-                        <br> 認定ビジネスコーチ
-                        <br> 認定プロコーチ
-                        <br> 認定深層冥想コーチ
-                        <br> 及び多数の心理学スキル </p>
-                </div>
-                <h3 class="books-heading">
-                    <img src="./img/author-heading-pc.png" alt="著書">
-                    <img src="./img/author-heading-sp.png" alt="著書">
-                </h3>
-                <div class="books-boxes">
-                    <div class="books-box">
-                        <img src="./img/book1-pc.png" alt="【なぜセラピストは瞑想すると集客力が上がるのか？】">
-                        <img src="./img/book1-sp.png" alt="【なぜセラピストは瞑想すると集客力が上がるのか？】">
-                        <p>【なぜセラピストは瞑想すると<br>集客力が上がるのか？】</p>
-                    </div>
-                    <div class="books-box">
-                        <img src="./img/book2-pc.png" alt="【門外不出の潜在意識入門】">
-                        <img src="./img/book2-sp.png" alt="【門外不出の潜在意識入門】">
-                        <p>【門外不出の潜在意識入門】</p>
-                    </div>
-                    <div class="books-box">
-                        <img src="./img/book3-pc.png" alt="【門外不出の潜在意識入門】">
-                        <img src="./img/book3-sp.png" alt="【門外不出の潜在意識入門】">
-                        <p>【挫折に強い子どもが育つ言葉と心の教科書】　</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>
-            <img src="./img/contact-heading-pc.png" alt="申し込み">
-            <img src="./img/contact-heading-sp.png" alt="申し込み">
-        </h2>
-        <div class="formmailer-embed" data-form-hash="08552cfb753400" data-form-host="ssl.form-mailer.jp"></div>
-    </section>
-    <script src="https://ssl.form-mailer.jp/formfiles/js/embed.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script src="./script.js"></script>
+        <input type="hidden" name="rgst" value="entry">
+    </form>
 </body>
 
 </html>
