@@ -231,7 +231,7 @@ img {
 }
 
 .change .change-content {
-  background-image: url(../img/change-bg-pc.png);
+  background-image: url(./img/change-bg-pc.png);
   background-repeat: no-repeat;
   padding: 70px 0;
 }
@@ -269,7 +269,7 @@ img {
     display: block;
   }
   .change .change-content {
-    background-image: url(../img/change-bg-sp.png);
+    background-image: url(./img/change-bg-sp.png);
     background-size: cover;
     padding: 30px 0;
   }
