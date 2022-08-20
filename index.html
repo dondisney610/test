@@ -5,234 +5,302 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .bubble-area {
-            background: linear-gradient(to bottom, #6ca4e4 0%, #0c2b84 100%);
-            width: 100%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .bubble-move {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            transition-delay: 0s;
-            transition-duration: 10s;
-            transition-property: top;
-            transition-timing-function: linear;
-        }
-        
-        .bubble-move[data-mode="1"] {
-            transition-timing-function: linear;
-        }
-        
-        .bubble-move[data-mode="2"] {
-            transition-timing-function: ease;
-        }
-        
-        .bubble-move[data-mode="3"] {
-            transition-timing-function: ease-in-out;
-        }
-        
-        .bubble-shake {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
-            animation-delay: 0s;
-            animation-timing-function: ease;
-            animation-iteration-count: infinite;
-            animation-direction: normal;
-        }
-        
-        .bubble-shake[data-shake="1"] {
-            animation-name: shake-1;
-            animation-duration: 2.0s;
-        }
-        
-        .bubble-shake[data-shake="2"] {
-            animation-name: shake-2;
-            animation-duration: 2.5s;
-        }
-        
-        .bubble-shake[data-shake="3"] {
-            animation-name: shake-3;
-            animation-duration: 3.0s;
-        }
-        
-        .bubble-shake[data-shake="4"] {
-            animation-name: shake-4;
-            animation-duration: 3.5s;
-        }
-        
-        .bubble-shake:after {
-            content: "";
-            display: block;
-            width: 20%;
-            height: 20%;
-            border-radius: 100%;
-            background: rgba(255, 255, 255, 0.8);
-            position: absolute;
-            right: 15%;
-            top: 15%;
-            filter: blur(2px);
-            transform: rotateZ(45deg) scaleY(0.8);
-        }
-        
-        @keyframes shake {
-            0% {
-                transform: translateX( 10px)
-            }
-            50% {
-                transform: translateX(-10px)
-            }
-            100% {
-                transform: translateX( 10px)
-            }
-        }
-        
-        @keyframes shake-1 {
-            0% {
-                transform: translateX( 10px)
-            }
-            50% {
-                transform: translateX(-10px)
-            }
-            100% {
-                transform: translateX( 10px)
-            }
-        }
-        
-        @keyframes shake-2 {
-            0% {
-                transform: translateX(-15px)
-            }
-            50% {
-                transform: translateX( 15px)
-            }
-            100% {
-                transform: translateX(-15px)
-            }
-        }
-        
-        @keyframes shake-3 {
-            0% {
-                transform: translateX( 20px)
-            }
-            50% {
-                transform: translateX(-20px)
-            }
-            100% {
-                transform: translateX( 20px)
-            }
-        }
-        
-        @keyframes shake-4 {
-            0% {
-                transform: translateX(-25px)
-            }
-            50% {
-                transform: translateX( 25px)
-            }
-            100% {
-                transform: translateX(-25px)
-            }
-        }
-    </style>
+    <title>インナーチャイルド 心理セラピー</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        (function(d) {
+            var config = {
+                    kitId: 'tqu5qhh',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <script>
+        (function(d) {
+            var config = {
+                    kitId: 'tqu5qhh',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 </head>
 
 <body>
-    <div class="bubble-area"></div>
-    <script>
-        (function() {
-            var MAIN = function() {
-                this.area = document.querySelector(".bubble-area");
-                if (!this.area) {
-                    return;
-                }
-                this.borns();
-            };
-            MAIN.prototype.borns = function() {
-                var num = this.get_rand(20, 400);
-                for (var i = 0; i < num; i++) {
-                    this.set_item();
-                }
-            };
+    <section class="FV">
+        <img src="./img/fv-pc.png" alt="PCのファーストビュー">
+        <img src="./img/fv-sp.png" alt="SPのファーストビュー">
+    </section>
+    <div class="cta">
+        <div class="cta-message">
+            <img src="./img/cta-message.png" alt="CTA上のメッセージ">
+        </div>
+        <div class="cta-button">
+            <a href="https://lin.ee/csQ3pcp" target="_blank" rel="noopener noreferrer">
+                <img src="./img/cta-button.png" alt="CTAのボタン">
+            </a>
+        </div>
+        <p>※LINE 登録後、セッションをご希望される方は<br>「セッション希望」と一言メッセージを入れてください。
+        </p>
+    </div>
+    <section class="problem">
+        <h2>普段の生活の中で<br> こんなことはありませんか？
+        </h2>
+        <div class="problem-content1">
+            <img src="./img/problem1-pc.png" alt="悩み一覧">
+            <img src="./img/problem1-sp.png" alt="悩み一覧">
+        </div>
+        <div class="arrow">
+            <img src="./img/arrow-pc.png" alt="インナーチャイルドを癒やすことが、あなたのお悩みを解決するお手伝いにきっとなります。">
+            <img src="./img/arrow-sp.png" alt="インナーチャイルドを癒やすことが、あなたのお悩みを解決するお手伝いにきっとなります。">
+        </div>
+        <div class="container">
+            <p><span>インナーチャイルドとは<br>
+            「傷ついた子供の心」のことです。</span><br><br> 幼いころに受けた心の傷が
 
+                <br> 大人になっても大きな影響を
+                <br> 与え続けることもあるのです。
+                <br><br> 「三つ子の魂百まで」ということわざ通り、
 
-            MAIN.prototype.set_item = function() {
-                if (!this.area) {
-                    return;
-                }
-                var item = document.createElement("a");
-                var shake = document.createElement("div");
-                shake.className = "bubble-shake";
-                var shake_num = this.get_rand(1, 4);
-                shake.setAttribute("data-shake", shake_num);
-                item.appendChild(shake);
-                item.setAttribute("href", "https://google.com");
+                <br> 人格は家庭や環境において
+                <br> 3歳までに80％が形成されると
+                <br> いわれています。
+                <br><br> 誰でも思い出したくない
 
-                var pos = this.get_random_pos();
-                item.className = "bubble-move";
-                var move_num = this.get_rand(1, 3);
-                shake.setAttribute("data-move", move_num);
-                var id = (+new Date());
-                item.setAttribute("data-id", id);
-                item.style.setProperty("top", pos.top + "px");
-                item.style.setProperty("left", pos.left + "px");
-                var scale = this.get_scale(0.3, 1.0);
-                item.style.setProperty("transform", "scale(" + scale + ")");
-                var duration = scale * 20000 / 2;
-                item.style.setProperty("transition-duration", duration + "ms", "important");
-                item.ontransitionend = (function(e) {
-                    var elm = e.target;
-                    elm.parentNode.removeChild(elm);
-                    this.set_item();
-                }).bind(this);
+                <br> 子供時代の記憶や体験を
+                <br> 持っているのではないでしょうか？
+            </p>
+            <div class="problem-content2">
+                <img src="./img/problem2-pc.png" alt="「悩み」2つ目の写真">
+                <img src="./img/problem2-sp.png" alt="「悩み」2つ目の写真">
+            </div>
+            <p>その経験がインナーチャイルドへ<br> つながってしまうのです。
+                <br> 生きづらさを感じている方にとって、
+                <br>
+                <span>インナーチャイルドの存在を認めることが<br>
+            人生を良くする第一歩になるです。</span><br><br> インナーチャイルドを癒やすには、
 
-                this.area.appendChild(item);
+                <br> 自分の心と向き合い、
+                <br> 深層心理を客観的に
+                <br> 理解していくことが大切です。
+            </p>
+            <div class="problem-content3">
+                <img src="./img/problem3-pc.png" alt="「悩み」3つ目の写真">
+                <img src="./img/problem3-sp.png" alt="「悩み」3つ目の写真">
+            </div>
+            <p>当セラピーでは<span>継続的に心をケアしながら、<br>
+            インナーチャイルドを癒やす<br>
+            お手伝いをしていきます。</span><br> 幼いころにできた
+                <br> 自分の小さな部屋から飛び出して、
+                <br> ありのままの素敵なあなたを
+                <br> 取り戻しましょう。
+            </p>
+            <div class="problem-content4">
+                <img src="./img/problem4-pc.png" alt="「悩み」4つ目の写真">
+                <img src="./img/problem4-sp.png" alt="「悩み」4つ目の写真">
+            </div>
+        </div>
 
-                var rand_time = this.get_rand(0, 10000);
-                setTimeout((function(item) {
-                    item.style.setProperty("top", "-60px", "");
-                }).bind(this, item), rand_time);
+    </section>
+    <section class="change">
+        <h2>
+            <img src="./img/change-heading-pc.png" alt="インナーチャイルドを癒すことで訪れる変化">
+            <img src="./img/change-heading-pc.png" alt="インナーチャイルドを癒すことで訪れる変化">
+        </h2>
+        <div class="change-content">
+            <div class="container">
+                <p>傷ついたインナーチャイルドは、<br> あなたの普段の生活に
+                    <br> 大きな影響を与えています。
+                    <br><br> インナーチャイルドを癒やすことで、
 
-            };
+                    <br> 次のような変化が
+                </p>
+                <img src="./img/change-content-pc.png" alt="変化の内容">
+                <img src="./img/change-content-sp.png" alt="変化の内容">
+            </div>
+        </div>
+    </section>
+    <section class="risk">
+        <h2>
+            <img src="./img/risk-heading-pc.png" alt="現状を変え、なりたい自分を手に入れる">
+            <img src="./img/risk-heading-sp.png" alt="現状を変え、なりたい自分を手に入れる">
+        </h2>
+        <div class="risk-content">
+            <div class="container">
+                <div class="container-inner">
+                    <p>インナーチャイルドを<br> 癒やすことにはリスクもあります。
+                        <br><br> 心の奥に留めているイヤな記憶や
 
-            MAIN.prototype.get_random_pos = function() {
-                return {
-                    top: this.area.offsetHeight,
-                    left: Math.floor(Math.random() * this.area.offsetWidth)
-                };
-            };
+                        <br> 感情と向き合わなくてはいけないため、
+                        <br> 自分自身への負担が大きいのです。
+                        <br> 心の防衛本能がそれらを
+                        <br> 忘れさせていることもあるので、
+                        <br> 無理に思い出すことは
+                        <br> その時の悲しい感情を
+                        <br> もう一度味わうことになりかねません。
+                    </p>
+                    <div class="risk-image">
+                        <img src="./img/risk1-pc.png" alt="「リスク」セクションの1つ目の画像">
+                        <img src="./img/risk1-sp.png" alt="「リスク」セクションの1つ目の画像">
+                    </div>
+                    <p>また、インナーチャイルドを癒やした反動で<br> 極端に行動が変わり、
+                        <br> 周りの方に迷惑をかけてしまうこともあります。
+                        <br> 無理や極端を避けることが大切です。
+                        <br><br> しかしながら
+                        <br> どのように実践すればよいかわからない
+                        <br> という人がほとんどでしょう。
+                        <br> そんなあなたには
+                        <br> 少しずつインナーチャイルドを
+                        <br> 癒すための知識や技術を身に着けた
+                        <br> 専門のセラピストとのセッションを
+                        <br> おすすめします
+                    </p>
+                    <div class="risk-image">
+                        <img src="./img/risk2-pc.png" alt="「リスク」セクションの1つ目の画像">
+                        <img src="./img/risk2-sp.png" alt="「リスク」セクションの1つ目の画像">
+                    </div>
+                </div>
 
-            MAIN.prototype.get_scale = function(min, max) {
-                return Math.floor((Math.random() * (max - min) + min) * 100) / 100;
-            };
-
-            MAIN.prototype.get_rand = function(min, max) {
-                return Math.floor((Math.random() * (max - min) + min));
-            };
-
-
-            window.addEventListener("load", function() {
-                new MAIN()
-            });
-        })()
-    </script>
+            </div>
+        </div>
+    </section>
+    <div class="cta">
+        <div class="cta-message">
+            <img src="./img/cta-message.png" alt="CTA上のメッセージ">
+        </div>
+        <div class="cta-button">
+            <a href="https://lin.ee/csQ3pcp" target="_blank" rel="noopener noreferrer">
+                <img src="./img/cta-button.png" alt="CTAのボタン">
+            </a>
+        </div>
+        <p>※LINE 登録後、セッションをご希望される方は<br>「セッション希望」と一言メッセージを入れてください。<br>※対象年齢30歳以上の方
+        </p>
+    </div>
+    <section class="greeting">
+        <h2>
+            <img src="./img/greeting-heading.png" alt="ご挨拶">
+        </h2>
+        <div class="greeting-content">
+            <div class="container">
+                <div class="container-inner">
+                    <img src="./img/therapist.png" alt="心理セラピスト">
+                    <p>アメリカ最先端のセラピーメソッドで<br> あなたの心を癒します。
+                        <br><br> 幼少期につくられた思い込みや刷り込み、
+                        <br> そして感情が現実を作ることに注目し
+                        <br> インナーチャイルドを癒やすことで
+                        <br> 現在の生活の中での生きづらさを解消し、
+                        <br> ありのままの自分を手に入れる
+                        <br> お手伝いをしています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <h2>
+            <img src="./img/review-heading-pc.png" alt="お悩み相談後の感想">
+            <img src="./img/review-heading-sp.png" alt="お悩み相談後の感想">
+        </h2>
+        <div class="reviews-content">
+            <div class="container">
+                <div class="review-box">
+                    <div class="box-inner">
+                        <img src="./img/review1-pc.png" alt="N.Mさん">
+                        <img src="./img/review1-sp.png" alt="N.Mさん">
+                        <p>あれから今までの自分を振り返り、親の期待に応えたいとずっと思っていたことや、私が親になった今子どもたちへかける言葉選びなどについて自然と考える時間を持つようになり、固まっていた思い？みたいなのが和らいでずいぶん気持ちが楽になっていることを実感しています。</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <div class="box-inner">
+                        <img src="./img/review2-pc.png" alt="A.Yさん">
+                        <img src="./img/review2-sp.png" alt="A.Yさん">
+                        <p>・私自身かなりちぐはぐな話し方をしてしまいましたが否定をせず聴いてくれたこと。 ・知識に専門性があり気づきを得られたこと。特に内にある自分も母親も笑顔でいられるようには考えが一歩進めることができ私の段階に沿った答えを得られたと感じました。
+                        </p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <div class="box-inner">
+                        <img src="./img/review3-pc.png" alt="T.Kさん">
+                        <img src="./img/review3-sp.png" alt="T.Kさん">
+                        <p>どんどん涙が溢れてきて止まらなかったです。私も愛されていたんだなぁ、私も愛していいんだなぁと…不器用な両親に育てられてきて、私も同じように不器用に子供たちに接してきて…。何か亡くなった父のことも許せる気がしますし、母のことも許して愛を持って接して行きたいと思いました。 もちろん子供たちにも。</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <div class="box-inner">
+                        <img src="./img/review4-pc.png" alt="Y.Mさん">
+                        <img src="./img/review4-sp.png" alt="Y.Mさん">
+                        <p>インナーチャイルドの癒し、りょうさんに導かれての癒しでは効果・リアリティを感じれました。 まだまだ凝り固まった私の心、固定観念を一つずつ剥がして本来の自分を生きたいと思いました。<br> 小さなことからでも自分の心に問いかけ、【何が好き】を実践していきます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flow">
+        <h2>
+            <img src="./img/flow-heading-pc.png" alt="ご利用の流れ">
+            <img src="./img/flow-heading-sp.png" alt="ご利用の流れ">
+        </h2>
+        <div class="flow-content">
+            <img src="./img/flow-content-pc.png" alt="ご利用の流れの説明">
+            <img src="./img/flow-content-sp.png" alt="ご利用の流れの説明">
+        </div>
+    </section>
+    <div class="cta">
+        <div class="cta-message">
+            <img src="./img/cta-message.png" alt="CTA上のメッセージ">
+        </div>
+        <div class="cta-button">
+            <a href="https://lin.ee/csQ3pcp" target="_blank" rel="noopener noreferrer">
+                <img src="./img/cta-button.png" alt="CTAのボタン">
+            </a>
+        </div>
+        <p>※LINE 登録後、セッションをご希望される方は<br>「セッション希望」と一言メッセージを入れてください。<br>※対象年齢30歳以上の方
+        </p>
+    </div>
 </body>
 
 </html>
