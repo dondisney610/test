@@ -1,35 +1,6 @@
 {
-  "inquiries": [
-    {
-      "id": 1,
-      "name": "あ",
-      "mail": "",
-      "message": ""
-    },
-    {
-      "name": "1",
-      "id": 2
-    },
-    {
-      "id": 3,
-      "name": "テスト"
-    },
-    {
-      "id": 5,
-      "name": "1"
-    },
-    {
-      "id": 7,
-      "name": "1"
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 100,
-      "name": "あ",
-      "mail": "",
-      "message": ""
-    }
-  ]
+    "id": 1,
+    "name": "あ",
+    "mail": "",
+    "message": ""
 }
