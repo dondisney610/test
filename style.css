@@ -1,8 +1,368 @@
-a {
-  color: #000;
-  text-decoration: none;
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
-p {
-  font-size: 18px;
+body {
+  color: #614d3f;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
+body.-active {
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sp_br {
+  display: none;
+}
+
+@media (max-width: 1028px) {
+  .container {
+    width: 92%;
+    margin: 0 auto;
+  }
+  .sp_br {
+    display: block;
+  }
+}
+header {
+  background-color: white;
+  padding: 20px 0 20px;
+  width: 100%;
+  height: 88px;
+  z-index: 2;
+}
+header #header_logo {
+  width: 100px;
+  margin: 0 auto 15px;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+header nav ul li {
+  padding: 0 20px;
+  border-right: 1px black solid;
+}
+header nav ul li a {
+  color: #614d3f;
+}
+header nav ul li:last-child {
+  border-right: none;
+}
+header #hamburger_button {
+  display: none;
+}
+header #to_top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1;
+  border: #fff 1px solid;
+  border-radius: 25px;
+  padding: 5px 9px;
+  cursor: pointer;
+}
+header #to_top i {
+  font-size: 25px;
+}
+
+@media (max-width: 1028px) {
+  header {
+    position: fixed;
+    height: auto;
+  }
+  header #header_logo {
+    margin: 0 auto;
+    width: 80px;
+  }
+  header nav {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+  header nav.-active {
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    background-color: #fff;
+    padding-top: 90px;
+    z-index: 5;
+  }
+  header nav.-active ul {
+    flex-direction: column;
+  }
+  header nav.-active ul li {
+    border-right: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  header #hamburger_button {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background-color: transparent;
+    z-index: 10;
+  }
+  header #hamburger_button span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  header #hamburger_button span:first-child {
+    top: 0;
+  }
+  header #hamburger_button span:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  header #hamburger_button span:nth-child(3) {
+    bottom: 0;
+  }
+  header #hamburger_button.-active span:first-child {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+  header #hamburger_button.-active span:nth-child(2) {
+    top: 10px;
+    margin: 0;
+    transform: rotate(45deg);
+  }
+  header #hamburger_button.-active span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+}
+footer {
+  background-color: #5b795a;
+  padding: 20px 0 40px;
+  position: relative;
+  z-index: 0;
+}
+footer #foooter_nav {
+  margin-bottom: 20px;
+}
+footer #foooter_nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer #foooter_nav ul li {
+  border-right: 1px white solid;
+  padding: 0 20px;
+}
+footer #foooter_nav ul li a {
+  color: white;
+}
+footer #foooter_nav ul li:last-child {
+  border-right: none;
+}
+footer #footer_logo {
+  padding-bottom: 50px;
+}
+footer #footer_logo img {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+footer #footer_instagram {
+  width: 50px;
+  position: absolute;
+  top: 60px;
+  right: 160px;
+}
+footer #footer_copyright p {
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 50px 0 40px;
+  }
+  footer #foooter_nav {
+    display: none;
+  }
+  footer #footer_logo {
+    padding-bottom: 30px;
+  }
+  footer #footer_logo img {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+  footer #footer_instagram {
+    width: 50px;
+    position: relative;
+    top: unset;
+    right: unset;
+    margin: 0 auto 30px;
+  }
+  footer #footer_copyright p {
+    font-size: 0.75rem;
+  }
+}
+main {
+  padding-top: 0px;
+}
+main #top_main_visual #main_visual_slides li {
+  position: relative;
+}
+main #top_main_visual #main_visual_slides li img:nth-child(2) {
+  display: none;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide1 .main_visual_slide_inner_contents {
+  position: absolute;
+  top: 16vw;
+  width: 100%;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide1 .main_visual_slide_inner_contents h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: normal;
+  margin-bottom: 1vw;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide1 .main_visual_slide_inner_contents h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 2vw;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide1 .main_visual_slide_inner_contents #main_visual_logo {
+  margin: 0 auto 2vw;
+  width: 140px;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide1 .main_visual_slide_inner_contents p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide2 .main_visual_slide_inner_contents {
+  position: absolute;
+  top: 20vw;
+  width: 100%;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide2 .main_visual_slide_inner_contents h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 15px;
+  opacity: 0.6;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide3 .main_visual_slide_inner_contents {
+  position: absolute;
+  top: 20vw;
+  width: 100%;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide3 .main_visual_slide_inner_contents h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 15px;
+  opacity: 0.3;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide4 .main_visual_slide_inner_contents {
+  position: absolute;
+  top: 24vw;
+  width: 100%;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide4 .main_visual_slide_inner_contents p {
+  text-align: center;
+  font-size: 1.666vw;
+}
+main #top_main_visual #main_visual_slides li#main_visual_slide4 .main_visual_slide_inner_contents p span {
+  width: 12.5vw;
+  display: inline-block;
+}
+main #brand_story {
+  display: flex;
+}
+main #brand_story .bramd_story_box_right h2 {
+  font-family: serif;
+}
+
+@media (max-width: 1028px) {
+  main {
+    padding-top: 87px;
+  }
+  main #brand_story {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  main #top_main_visual #main_visual_slides li img:nth-child(1) {
+    display: none;
+  }
+  main #top_main_visual #main_visual_slides li img:nth-child(2) {
+    display: block;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide1 .main_visual_slide_inner_contents h2 {
+    font-size: 5vw;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide1 .main_visual_slide_inner_contents h3 {
+    font-size: 5.5vw;
+    margin-bottom: 8vw;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide1 .main_visual_slide_inner_contents #main_visual_logo {
+    width: 45vw;
+    margin-bottom: 8vw;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide2 .main_visual_slide_inner_contents {
+    top: 40vw;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide2 .main_visual_slide_inner_contents h3 {
+    font-size: 5.5vw;
+    margin-bottom: 8vw;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide3 .main_visual_slide_inner_contents {
+    top: 40vw;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide3 .main_visual_slide_inner_contents h3 {
+    font-size: 5.5vw;
+    margin-bottom: 8vw;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide4 .main_visual_slide_inner_contents {
+    top: 40vw;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide4 .main_visual_slide_inner_contents p {
+    font-size: 5.5vw;
+    margin-bottom: 8vw;
+  }
+  main #top_main_visual #main_visual_slides li#main_visual_slide4 .main_visual_slide_inner_contents p span {
+    display: block;
+    width: 0px;
+  }
+}/*# sourceMappingURL=style.css.map */
